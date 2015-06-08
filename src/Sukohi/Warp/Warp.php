@@ -8,7 +8,7 @@ class Warp {
 
         if(empty($current_url)) {
 
-            $current_url = \Request::url();
+            $current_url = \Request::fullUrl();
 
         }
 
