@@ -4,7 +4,7 @@ class Warp {
 
     private $_prefix = 'WARP_URLs';
 
-    public function set($key, $current_url) {
+    public function set($key, $current_url = '') {
 
         if(empty($current_url)) {
 
