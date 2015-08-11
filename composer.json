@@ -1,6 +1,6 @@
 {
     "name": "sukohi/warp",
-    "description": "",
+    "description": "A PHP package mainly developed for Laravel to remember URLs to redirect through session.",
     "authors": [
         {
             "name": "Sukohi",
@@ -9,15 +9,11 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "laravel/framework": "~5.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
-            "Sukohi\\Warp\\": "src/"
+        "psr-4": {
+            "Sukohi\\Camon\\": "src/"
         }
     },
     "minimum-stability": "stable"
