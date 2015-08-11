@@ -34,7 +34,7 @@ Usage
 
     \Warp::set('my_place', $current_url = '');
 
-    // After moving some pages
+    // After moving some pages 
 
     echo $url = \Warp::get('my_place', $alternative_url = 'http://example.com');
 
