@@ -1,22 +1,33 @@
 # Warp
-A PHP package mainly developed for Laravel to remember URLs to redirect through session.
+A PHP package mainly developed for Laravel to remember URLs to redirect through session.  
+(This is for Laravel 4.2. [For Laravel 5+](https://github.com/SUKOHI/Warp))
 
-Installation&settings for Laravel
+Installation
 ====
 
-After installation using composer, add the followings to the array in  app/config/app.php
+Add this package name in composer.json
 
-    'providers' => array(  
+    "require": {
+      "sukohi/warp": "1.*"
+    }
+
+Execute composer command.
+
+    composer update
+
+Register the service provider in app.php
+
+    'providers' => [
         ...Others...,  
         'Sukohi\Warp\WarpServiceProvider',
-    )
+    ]
 
-Also
+Also alias
 
-    'aliases' => array(  
+    'aliases' => [
         ...Others...,  
         'Warp' => 'Sukohi\Warp\Facades\Warp',
-    )
+    ]
 
 Usage
 ====
