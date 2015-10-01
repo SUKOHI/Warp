@@ -17,14 +17,19 @@ class Warp {
 
     }
 
-    public function get($key, $alternative_url) {
+    public function get($key, $alternative_url, $forget_flag = true) {
 
         $session_key = $this->session_key($key);
         
         if(\Session::has($session_key)) {
 
             $url = \Session::get($session_key);
-            \Session::forget($session_key);
+
+            if($forget_flag) {
+
+                \Session::forget($session_key);
+
+            }
 
         } else {
 
