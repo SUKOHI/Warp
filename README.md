@@ -31,12 +31,17 @@ Also alias
 
 Usage
 ====
+    
+    Warp::set('my_place');
+    Warp::set('my_place', $current_url = '');  // or You can set URL you want to keep.
+    
+    
+    // After moving some pages 
+    
+    $url = \Warp::get('my_place');
+    $url = \Warp::get('my_place', $alternative_url = 'http://example.com');    // You also can set alternative(default) URL.
+    $url = \Warp::get('my_place', $alternative_url, $forget_flag = true);      // If $forget_flag is false, URL you set will not be removed.
 
-    Warp::set('my_place', $current_url = '');
-
-    // After moving some pages
-
-    echo $url = Warp::get('my_place', $alternative_url = 'http://example.com');
 
 License
 ====
