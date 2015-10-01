@@ -35,10 +35,6 @@ Usage
     \Warp::set('my_place');
     \Warp::set('my_place', $current_url = '');  // or You can set URL you want to keep.
 
-<<<<<<< HEAD
-    // After moving some pages 
-=======
->>>>>>> 2.0
 
     // After moving some pages 
 
