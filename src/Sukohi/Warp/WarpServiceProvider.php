@@ -18,7 +18,7 @@ class WarpServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('sukohi/warp');
+		$this->package('whoops-report/warp');
 	}
 
 	/**

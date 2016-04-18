@@ -4,7 +4,13 @@ class Warp {
 
     private $_prefix = 'WARP_URLs';
 
-    public function set($key, $current_url = '') {
+    public function set($key = '', $current_url = '') {
+
+		if(empty($key)) {
+
+			$key = \Route::getCurrentRoute()->getName();
+
+		}
 
         if(empty($current_url)) {
 
@@ -38,6 +44,12 @@ class Warp {
         return $url;
 
     }
+
+	public function route($route, $forget_flag = true) {
+
+		return $this->get($route, route($route), $forget_flag);
+
+	}
 
     private function session_key($key) {
 
