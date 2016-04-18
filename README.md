@@ -2,8 +2,7 @@
 A PHP package mainly developed for Laravel to remember URLs to redirect through session.  
 (This is for Laravel 5+. [For Laravel 4.2](https://github.com/SUKOHI/Warp/tree/1.0))
 
-Installation
-====
+# Installation
 
 Add this package name in composer.json
 
@@ -29,8 +28,7 @@ Also alias
         'Warp'   => Sukohi\Warp\Facades\Warp::class
     ]
 
-Usage
-====
+# Usage
 
     \Warp::set('my_place');
     \Warp::set('my_place', $current_url = '');  // or You can set URL you want to keep.
@@ -42,8 +40,16 @@ Usage
     $url = \Warp::get('my_place', $alternative_url = 'http://example.com');    // You also can set alternative(default) URL.
     $url = \Warp::get('my_place', $alternative_url, $forget_flag = true);      // If $forget_flag is false, URL you set will not be removed.
 
-License
-====
+# with Route name
+
+    Warp::set('your.route.name');   // the argument is optional. If in the case, route name automatically will be set.
+    
+    // After moving some pages 
+    
+    $url = Warp::route('your.route.name');
+
+# License
+
 This package is licensed under the MIT License.
 
 Copyright 2015 Sukohi Kuhoh
